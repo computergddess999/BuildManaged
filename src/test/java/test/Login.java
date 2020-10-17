@@ -18,12 +18,13 @@ public class Login {
    @Test  (priority=2)
 	public void negativeLogin()  throws InterruptedException {
 	   // WebDriver driver=null;
+	   
 	   //WebDriver driver = new ChromeDriver();
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
-//
+
 		driver.get("http://magento.com");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@id=\"block-header\"]/ul/li[9]/a/span[1]/div")).click();
